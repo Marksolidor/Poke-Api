@@ -7,6 +7,10 @@ const SearchBar = () => {
         console.log(e.target.value);
         setSearch (e.target.value);
     }
+    const findPoke = (e) => {
+        console.log("Searching...")
+    }
+    
     return (
 <>
 <div>
@@ -15,7 +19,7 @@ const SearchBar = () => {
     onChange={searching}/>
 </div>
 <div>
-    {search}
+    <button onClick={findPoke}> Buscar </button>
 </div>
 </>
     );
