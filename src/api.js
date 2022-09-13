@@ -15,3 +15,13 @@ export const searchPokemon = async (pokemon) => {
       return data;
     } catch (err) {}
   };
+
+  //recoge la información del pokemon requerido y la entrega
+  export const getPokemonData = async (url) =>{
+    try{
+      const response = await fetch(url);
+      const data = await response.json();
+      return data;
+  } catch (err) {
+
+  }}

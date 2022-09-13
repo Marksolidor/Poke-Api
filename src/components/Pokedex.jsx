@@ -1,4 +1,5 @@
 import React from "react";
+import Pokemon from "./Pokemon";
 
 const Pokedex = (props) =>{
     console.log(props)
@@ -12,7 +13,7 @@ const Pokedex = (props) =>{
             <div>
                 {pokemons.map((pokemon, idx) =>{
                     return(
-                        <div>{pokemon.name}</div>
+                        <Pokemon pokemon={pokemon} key={pokemon.name}/>
                     )
                 }
                 

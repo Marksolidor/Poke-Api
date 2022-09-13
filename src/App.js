@@ -2,7 +2,7 @@ import React from "react";
 import Navbar from "./components/Navbar";
 import Pokedex from "./components/Pokedex";
 import SearchBar from "./components/SearchBar";
-import {getPokemons} from "./api";
+import {getPokemonData, getPokemons} from "./api";
 
 const {useState, useEffect} = React;
 
@@ -15,7 +15,12 @@ export default function App() {
     try{
       const data = await getPokemons();
       console.log(data)
-      setPokemons(data.results)
+      const promises = data.results.map(async (pokemon) => {
+        return await getPokemonData(pokemon.url)
+      }
+      );
+      const results = await Promise.all(promises) //no deja correr el codigo hasta regresar todo el array de promesas anterior
+    setPokemons(results)
     } catch(err){
 
     }
