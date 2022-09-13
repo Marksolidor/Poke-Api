@@ -1,5 +1,6 @@
 import React from "react";
 import Pokemon from "./Pokemon";
+import Pagination from "./Pagination"
 
 const Pokedex = (props) =>{
     console.log(props)
@@ -8,7 +9,12 @@ const Pokedex = (props) =>{
         <div>
             <div>
             <h1>Pokedex</h1>
-            <div>Pagination</div>
+            <Pagination
+            page={1}
+            totalPages={100}
+            onLeftClick={console.log}
+            onRIghtClick={console.log}
+            />
             </div>
             <div>
                 {pokemons.map((pokemon, idx) =>{
