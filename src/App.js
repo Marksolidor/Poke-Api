@@ -8,6 +8,9 @@ const {useState, useEffect} = React;
 
 export default function App() {
   const [pokemons, setPokemons] = useState([]);
+const [page, setPage] = useState();
+const [total, setTotal] = useState();
+const [loading, setLoading] = useState(true);
 
 
 //obtiene los datos de los pokes para mandar a renderizar en la funcion padre
@@ -21,6 +24,7 @@ export default function App() {
       );
       const results = await Promise.all(promises) //no deja correr el codigo hasta regresar todo el array de promesas anterior
     setPokemons(results)
+    setLoading(false);
     } catch(err){
 
     }
@@ -37,7 +41,10 @@ export default function App() {
     </div>
     <div>
       <SearchBar/>
-      <Pokedex pokemons={pokemons}/>
+      { loading ?
+      <div>Cargando pokemons...</div>:
+        <Pokedex pokemons={pokemons}/>
+        }
     </div>
 
     </>
