@@ -7,6 +7,7 @@ export const searchPokemon = async (pokemon) => {
     } catch (err) {}
   };
 
+  //recoge un numero maximo de pokemons y define desde cual pokemon inicia la renderización
   export const getPokemons = async (limit = 9, offset = 0) => {
     try {
       let url = `https://pokeapi.co/api/v2/pokemon?limit=${limit}&offset=${offset}`;
