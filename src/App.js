@@ -2,13 +2,12 @@ import React from "react";
 import Navbar from "./components/Navbar";
 import Pokedex from "./components/Pokedex";
 import SearchBar from "./components/SearchBar";
-//import Sort from "./components/Sort";
+import Sort from "./components/Sort";
 import {
   getPokemonData,
   getPokemons,
   searchPokemon,
 } from "./components//MiApi";
-import Sort from "./components/Sort";
 
 const { useState, useEffect } = React;
 
@@ -67,6 +66,7 @@ export default function App() {
   return (
     <div>
       <Navbar />
+      <div className="page-container">
       <div className="App">
         <SearchBar onSearch={onSearch} />
         <Sort pokemons={pokemons} setPokemons={setPokemons} />
@@ -83,6 +83,7 @@ export default function App() {
             total={total}
           />
         )}
+      </div>
       </div>
     </div>
   );

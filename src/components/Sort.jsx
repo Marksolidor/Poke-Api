@@ -4,7 +4,8 @@ const Sort = (props) => {
   const { pokemons, setPokemons } = props;
   return (
     <>
-      <div className="btn-order">
+    <label className="order-text">Ordenar de manera:</label>
+      <div className="btn-container">
         <button
           className="btn-order"
           onClick={() => {

@@ -5,10 +5,10 @@ const Pagination = (props) => {
     return(
 
    <>
-   <div>
-    <button onClick={onLeftClick}>Atras</button>
+   <div className="pagination">
+    <button className="pagination-btn" onClick={onLeftClick}> Back </button>
     <div>{page} de {totalPages}</div>
-    <button onClick={onRightClick}>Siguiente</button>
+    <button className="pagination-btn" onClick={onRightClick}> Next </button>
    </div>
    </>
     )
