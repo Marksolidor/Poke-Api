@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/https//Marksolidor.github.io/Poke-Api/static/css/main.e52e215c.css",
+    "main.js": "/https//Marksolidor.github.io/Poke-Api/static/js/main.ff2320b7.js",
+    "index.html": "/https//Marksolidor.github.io/Poke-Api/index.html",
+    "main.e52e215c.css.map": "/https//Marksolidor.github.io/Poke-Api/static/css/main.e52e215c.css.map",
+    "main.ff2320b7.js.map": "/https//Marksolidor.github.io/Poke-Api/static/js/main.ff2320b7.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e52e215c.css",
+    "static/js/main.ff2320b7.js"
+  ]
+}
