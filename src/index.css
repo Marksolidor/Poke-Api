@@ -150,6 +150,8 @@ nav {
 
 .page-container{
 background-color: #FFCB42;
+width: 100vw;
+height: 100vh;
 }
 
 .App {
